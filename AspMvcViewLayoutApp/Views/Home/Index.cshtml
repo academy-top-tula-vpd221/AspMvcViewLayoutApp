@@ -1,0 +1,17 @@
+﻿@inject ITimeService timeService
+@{
+    ViewBag.Title = "Home Page";
+    Product phone = new Product() { Title = "Phone Samsung", Price = 15000};
+
+}
+<h2>Home Page Content</h2>
+<h4>@timeService.Time</h4>
+<form>
+    <input value="@phone.Title"/><br/>
+    <input value="@phone.Price" />
+</form>
+
+@section Footer
+{
+        Copyright &copy; MySite @DateTime.Now.Year
+}

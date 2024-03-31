@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "About Page";
+
+}
+<h2>About Page Content</h2>
+
+@{
+    List<string> list = new() { "work 1", "example 2", "variant 3" };
+    await Html.RenderPartialAsync("Gallery", list);
+}

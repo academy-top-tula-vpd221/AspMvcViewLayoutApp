@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Top Academy | @ViewBag.Title</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    <div>
+        <a href="/Home/Index">Home Page</a>
+        <a href="/Home/About">About Page</a>
+        <a href="/Home/Gallery">Gallery Page</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        @if(IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <p>All right reserved</p>
+        }
+    </footer>
+</body>
+</html>
